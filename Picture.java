@@ -13,9 +13,11 @@ public class Picture
 {
     private Square wall;
     private Square window;
+    private Square window2;
     private Triangle roof;
     private Circle sun;
     private Circle sun2;
+    private Person person;
     private boolean drawn;
 
     /**
@@ -25,9 +27,11 @@ public class Picture
     {
         wall = new Square();
         window = new Square();
+        window2 = new Square();
         roof = new Triangle();  
         sun = new Circle();
         sun2 = new Circle();
+        person = new Person();
         drawn = false;
     }
 
@@ -42,11 +46,17 @@ public class Picture
             wall.changeSize(120);
             wall.makeVisible();
             
-            window.changeColor("black");
+            window.changeColor("blue");
             window.moveHorizontal(-120);
             window.moveVertical(40);
             window.changeSize(40);
             window.makeVisible();
+            
+            window2.changeColor("blue");
+            window2.moveHorizontal(-60);
+            window2.moveVertical(40);
+            window2.changeSize(40);
+            window2.makeVisible();
     
             roof.changeSize(60, 180);
             roof.moveHorizontal(20);
@@ -60,9 +70,14 @@ public class Picture
             sun.makeVisible();
             
             sun2.makeVisible();
-            sun2.changeSize(140);
+            sun2.changeSize(100);
             sun2.moveHorizontal(-200);
             sun2.changeColor("magenta");
+            
+            person.changeColor("black");
+            person.moveHorizontal(10);
+            person.moveVertical(30);
+            person.makeVisible();
             
             drawn = true;
         }
